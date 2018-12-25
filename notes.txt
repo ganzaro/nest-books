@@ -1,0 +1,33 @@
+
+
+npm install -S pg typeorm @nestjs/typeorm  dotenv
+
+touch ormconfig.json
+
+
+nest g mo book
+
+nest g controller book
+
+    { name: 'application', alias: 'app' },
+    { name: 'class', alias: 'cl' },
+    { name: 'controller', alias: 'co' },
+    { name: 'decorator', alias: 'd' },
+    { name: 'library', alias: 'lib' },
+    { name: 'filter', alias: 'f' },
+    { name: 'gateway', alias: 'ga' },
+    { name: 'guard', alias: 'gu' },
+    { name: 'interceptor', alias: 'i' },
+    { name: 'middleware', alias: 'mi' },
+    { name: 'module', alias: 'mo' },
+    { name: 'pipe', alias: 'pi' },
+    { name: 'provider', alias: 'pr' },
+    { name: 'service', alias: 's' },
+    
+
+
+//
+npm start
+
+
+
