@@ -14,8 +14,6 @@ export class LoggingInterceptor implements NestInterceptor {
     const method = req.method;
     const url = req.url;
 
-    console.log('Before...');
-
     return call$.pipe(
         tap(() =>
           Logger.log(
