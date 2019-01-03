@@ -8,9 +8,10 @@ import { BookModule } from './book/book.module';
 import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
 import { from } from 'rxjs';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot() , BookModule],
+  imports: [TypeOrmModule.forRoot() , UserModule, BookModule],
   controllers: [AppController],
   providers: [
     AppService,
