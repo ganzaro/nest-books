@@ -1,7 +1,9 @@
 import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
 import { BookService } from './book.service';
 import { BookDTO } from './book.dto';
+import { ApiUseTags, ApiResponse } from '@nestjs/swagger';
 
+@ApiUseTags('book')
 @Controller('book')
 export class BookController {
     constructor(private bookService: BookService) {}
@@ -12,6 +14,8 @@ export class BookController {
     }
 
     @Post()
+    @ApiResponse({ status: 201, description: 'The record has been successfully created.' })
+    @ApiResponse({ status: 403, description: 'Forbidden.' })
     createBook(@Body() data: BookDTO) {
         return this.bookService.create(data);
     }
